@@ -1,5 +1,14 @@
+noseX = 0;
+noseY=0;
+unfunny="";
+hat="";
+suit="";
+
+
 function preload(){
-    
+    unfunny = loadImage('https://i.postimg.cc/MKJrhrhn/unfunny-mustache.png');
+    hat = loadImage('https://i.postimg.cc/7YnLXQcM/hat-2-1.png');
+    suit = loadImage('https://i.postimg.cc/y8bhzDkL/who-would-haev-guessed.jpg');
 }
 function setup() {
     canvas = createCanvas(300,300);
@@ -14,6 +23,9 @@ function setup() {
 
 function draw(){
 image(video, 0, 0, 300, 300);
+image(unfunny, noseX-26, noseY-8, 60, 30);
+image(hat, noseX-55, noseY-150, 120, 100);
+image(suit, noseX-115, noseY+50,230,250);
 }
 
 function take_snapshot(){
@@ -25,7 +37,11 @@ function modelLoaded(){
 function gotPoses(results){
 if(results.length > 0){
     console.log(results);
-    console.log("nose x=" + results[0].pose.nose.x);
-    console.log("nose y=" + results[0].pose.nose.y);
+    noseX = results[0].pose.nose.x;
+    noseY = results[0].pose.nose.y;
+    console.log("nose x=" + noseX);
+    console.log("nose y=" + noseY);
+
+
  }
 }
