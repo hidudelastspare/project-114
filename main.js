@@ -8,7 +8,7 @@ suit="";
 function preload(){
     unfunny = loadImage('https://i.postimg.cc/MKJrhrhn/unfunny-mustache.png');
     hat = loadImage('https://i.postimg.cc/7YnLXQcM/hat-2-1.png');
-    suit = loadImage('https://i.postimg.cc/y8bhzDkL/who-would-haev-guessed.jpg');
+    suit = loadImage('https://i.postimg.cc/CKbgshbX/PLEASE.png');
 }
 function setup() {
     canvas = createCanvas(300,300);
@@ -23,9 +23,9 @@ function setup() {
 
 function draw(){
 image(video, 0, 0, 300, 300);
-image(unfunny, noseX-26, noseY-8, 60, 30);
+image(unfunny, noseX-26, noseY+5, 60, 30);
 image(hat, noseX-55, noseY-150, 120, 100);
-image(suit, noseX-115, noseY+50,230,250);
+image(suit, noseX-125, noseY+30,260,250);
 }
 
 function take_snapshot(){
